@@ -1,4 +1,5 @@
-import styles from '../login/login.module.css'
+import styles from '../../styles/login-signup.module.css'
+
 export default function Signin() {
   return (
     <>

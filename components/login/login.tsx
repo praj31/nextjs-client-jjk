@@ -1,35 +1,35 @@
+import styles from './login.module.css';
+
 export default function Login() {
   return (
-    <>
-      <div className="flex-container">
-        <div className="form-container">
-          <div className="login-page">
-            <div className="form">
-              <form className="login-form">
-                <h1>Login</h1>
+      <div className={styles.flexContainer}>
+        <div className={styles.formContainer}>
+          <div className={styles.loginPage}>
+            <div className={styles.form}>
+              <form className={styles.loginForm}>
+                <h1 className={styles.h1tag}>Login</h1>
                 <br />
-                <span className="subtitle">USERNAME:</span>
+                <span className={styles.subtitle}>USERNAME:</span>
                 <br />
-                <input type="text" name="username" />
+                <input className={styles.input} type="text" name="username" />
                 <br />
-                <span className="subtitle">PASSWORD:</span>
+                <span className={styles.subtitle}>PASSWORD:</span>
                 <br />
-                <input type="password" name="password" />
+                <input className={styles.input} type="password" name="password" />
                 <br />
-                <span className="subtitle"><a href="#">Forgot password?</a></span>
+                <span className={styles.subtitle}><a href="#">Forgot password?</a></span>
                 <br/>
                 <br/>
-                <input type="submit" value="SUBMIT" className="submit-btn" />
-                <span className="change-form-btn">
+                <input type="submit" value="SUBMIT" className={`${styles.submitBtn} ${styles.input}`} />
+                <span className={styles.changeFormBtn}>
                   {" "}
                   Dont have and accout?
-                  <a href="#"> Register here </a>
+                  <a className={styles.atag} href="#"> Register here </a>
                 </span>
               </form>
             </div>
           </div>
         </div>
       </div>
-    </>
   );
 }

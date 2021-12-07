@@ -1,5 +1,4 @@
 import '../styles/globals.css'
-import '../components/login/login.css'
 import type { AppProps } from 'next/app'
 
 function MyApp({ Component, pageProps }: AppProps) {

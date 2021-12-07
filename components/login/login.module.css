@@ -1,0 +1,94 @@
+.atag {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.h1tag {
+  color: rgb(0, 0, 0);
+
+  font-size: 35px;
+  font-weight: 800;
+}
+
+.flexCcontainer {
+  width: 100%;
+
+  padding: 5%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.formContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 500px;
+  height: auto;
+  flex-direction: column;
+
+  margin-top: 5px;
+  padding-top: 20px;
+
+  background: none;
+  border: 1px solid black;
+  /* box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.199); */
+}
+
+.subtitle {
+  font-size: 11px;
+
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.input {
+  border: none;
+  border-bottom: solid rgb(150, 150, 150) 1px;
+
+  margin-bottom: 30px;
+
+  background: none;
+  color: rgba(0, 0, 0, 0.5);
+
+  height: 35px;
+  width: 300px;
+}
+
+.submitBtn {
+  cursor: pointer;
+
+  border: none;
+  border-radius: 8px;
+
+  background: #38d39f;
+  color: rgba(255, 255, 255, 0.842);
+
+  width: 80px;
+
+  transition: all 1s;
+}
+
+.submitBtn:hover {
+  color: rgb(255, 255, 255);
+
+  box-shadow: none;
+}
+
+.changeFormBtn {
+  font-size: 10px;
+  color: rgb(134, 134, 134);
+
+  margin-left: 10px;
+}
+
+.changeFormBtn .atag {
+  font-size: 10px;
+  color: rgb(189, 189, 189);
+  padding-bottom: 5px;
+}
+
+.changeFormBtn .atag:hover {
+  border-bottom: 2px solid #38d39f;
+}

@@ -1,0 +1,136 @@
+.container {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.imgWrap {
+  position: relative;
+  width: 43em;
+  flex-grow: 0;
+  /* background-color: rgb(255, 221, 221); */
+}
+
+.formWrap {
+  width: 100%;
+  /* background-color: rgb(212, 212, 255); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  margin: 0;
+  padding: 0;
+}
+
+.theForm {
+  width: 100%;
+  max-width: 530px;
+  margin: 0;
+  padding: 30px 60px 0;
+  outline: none;
+  background-color: white;
+}
+.h1 {
+  padding-bottom: 20px;
+}
+
+.label {
+  display: block;
+  padding: 0;
+  margin: 0;
+  margin: 14px 0 4px;
+  color: #0d0c22;
+  font-weight: 700;
+}
+
+.input {
+  width: 100%;
+  height: 40px;
+  line-height: 28px;
+  margin-right: 8px;
+  padding: 10px 16px;
+  font-size: 14px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  outline: none;
+  background-color: #f3f3f4;
+  appearance: none;
+}
+
+.link {
+  position: relative;
+  float: right;
+  font-size: 14px;
+  font-weight: normal;
+  text-decoration: none;
+  color: #4f3cc9;
+}
+.blueLink {
+  position: relative;
+  padding-left: 12px;
+  font-size: 14px;
+  font-weight: normal;
+  text-decoration: none;
+  color: #4f3cc9;
+}
+
+.span {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.asker {
+  padding-top: 15px;
+}
+
+.inputBtn {
+  display: block;
+  position: relative;
+  height: 40px;
+  padding: 10px 16px;
+  border-radius: 8px;
+  outline: none;
+  text-align: center;
+  cursor: pointer;
+  appearance: none;
+  width: 100%;
+  margin-top: 25px;
+  max-width: 200px;
+  background-color: f082ac;
+  text-decoration: none;
+  background-color: rgb(255, 121, 121);
+  box-sizing: border-box;
+  font-weight: 700;
+  line-height: 20px;
+  color: #fff;
+}
+
+.divider {
+  margin-bottom: 10px;
+  padding: 0;
+  overflow: visible;
+  border: none;
+  border-top-color: currentcolor;
+  border-top-style: none;
+  border-top-width: medium;
+  border-top: 1px solid #e0e0e0;
+  color: #6e6d7a;
+  text-align: center;
+}
+
+/* ---------- Signup nu niche che ---------- */
+
+.fieldBreaker {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.formFieldContainer{
+    position: relative;
+    width: 48%;
+}
+

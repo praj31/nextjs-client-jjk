@@ -4,7 +4,7 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 
 const Home: NextPage = () => {
-    return <h1>Let's get started...shall we?</h1>
+    return <h1>Let`s get started...shall we?</h1>
 }
 
 export default Home

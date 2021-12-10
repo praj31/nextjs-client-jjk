@@ -10,14 +10,16 @@ const Login: NextPage = () => {
                 <section className={styles.imgWrap}>
                     <Image
                     src='/L1.jpg'
+                    width={1092}
+                    height={2048}
                     layout="fill"
                     />
                 </section>
                 <section className={styles.formWrap}>
                     <div className={styles.theForm}>
-                        <h1 className={styles.h1}>Welcom to JJK Family.</h1>
+                        <h1 className={styles.h1}>Welcome to Jujutsu High</h1>
                         <hr className={styles.divider} />
-                        <form action="">
+                        <form onSubmit={(e) => e.preventDefault()}>
                             <div className={styles.formFields}>
                             <fieldset>
                                 <label className={styles.label} htmlFor="login">Username</label>
@@ -26,7 +28,7 @@ const Login: NextPage = () => {
                             <fieldset>
                                 <label className={styles.label} htmlFor="login">Password
                                     <Link href="#">
-                                        <a className={styles.link} href="">Forgot Password?</a>
+                                        <a className={styles.link}>Forgot Password?</a>
                                     </Link>
                                 </label>
                                 <input type="password" className={styles.input}/>

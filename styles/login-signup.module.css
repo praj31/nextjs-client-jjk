@@ -1,0 +1,195 @@
+.container {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.img_wrap {
+  position: relative;
+  width: 43em;
+  flex-grow: 0;
+  /* background-color: rgb(255, 221, 221); */
+}
+
+.form_wrap {
+  width: 100%;
+  /* background-color: rgb(212, 212, 255); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  margin: 0;
+  padding: 0;
+}
+
+.the_form {
+  width: 100%;
+  max-width: 33.125em;
+  margin: 0;
+  padding: 1.875em 3.75em 0;
+  outline: none;
+  background-color: rgb(255, 255, 255);
+}
+.title_h1 {
+  padding-bottom: 1.25em;
+}
+
+.label_name {
+  display: block;
+  padding: 0;
+  margin: 0;
+  margin: 0.875em 0 0.25em;
+  color: #0d0c22;
+  font-weight: 700;
+}
+
+.input_area {
+  width: 100%;
+  height: 2.5em;
+  line-height: 1.75em;
+  margin-right: 0.5em;
+  padding: 0.625em 1em;
+  font-size: 0.875em;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  outline: none;
+  background-color: #f3f3f4;
+  appearance: none;
+}
+
+.link {
+  position: relative;
+  float: right;
+  font-size: 0.875em;
+  font-weight: normal;
+  text-decoration: none;
+  color: #4f3cc9;
+}
+.link_primary {
+  position: relative;
+  padding-left: 0.75em;
+  font-size: 0.875em;
+  font-weight: normal;
+  text-decoration: none;
+  color: #4f3cc9;
+}
+
+.span_member {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.asker {
+  padding-top: 0.9375em;
+}
+
+.input_btn {
+  display: block;
+  position: relative;
+  height: 2.5em;
+  padding: 0.625em 1em;
+  border-radius: 8px;
+  outline: none;
+  text-align: center;
+  cursor: pointer;
+  appearance: none;
+  width: 100%;
+  margin-top: 1.5625em;
+  max-width: 12.5em;
+  background-color: #f082ac;
+  text-decoration: none;
+  background-color: rgb(255, 121, 121);
+  box-sizing: border-box;
+  font-weight: 700;
+  line-height: 1.25em;
+  color: #fff;
+}
+
+.hr_divider {
+  margin-bottom: 0.625em;
+  padding: 0;
+  overflow: visible;
+  border: none;
+  border-top-color: currentcolor;
+  border-top-style: none;
+  border-top-width: medium;
+  border-top: 1px solid #e0e0e0;
+  color: #6e6d7a;
+  text-align: center;
+}
+
+/* ---------- Signup  ---------- */
+
+.field_breaker {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.form_field_container {
+  position: relative;
+  width: 48%;
+}
+
+.eye_icon {
+  position: relative;
+  float: right;
+  top: -1.99em;
+  right: 0.8em;
+  display: block;
+  cursor: pointer;
+}
+
+/* 
+
+set css units to em, rem
+
+Pass visi toggle
+Imag src alt wdth heigh layout
+give proper names to images
+
+{ forget password size }
+
+fields 
+1. Regex (not reqd now but will be done with backend)
+2. Handler should have e.preventdefauklt
+3. their own state
+4. upon getting data convert into
+
+make states for each fields create a fucntion submit()
+
+on submit clear the form
+
+make form responsive
+
+ */
+
+
+ /* Media Queries */
+ @media (min-width: 67.5em) {
+	 .img_wrap{
+		width: 43em;
+	 }
+ }
+ @media (min-width: 60em) {
+	 .img_wrap{
+		width: 37em;
+	 }
+ }
+
+ @media (max-width: 50.25em){
+	 .img_wrap{
+		 display: none;
+	 }
+ }
+
+ @media (max-width: 26.875em){
+	 .the_form{
+		 padding: 1.7em 1.7em 0;
+	 }
+ }
+
+ 

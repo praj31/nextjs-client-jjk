@@ -5,11 +5,13 @@ import Image from "next/image";
 import Link from "next/link";
 import styles from "../styles/login-signup.module.css";
 import usePasswordToggle from "../hooks/usePasswordToggle";
+import { PasswordField } from "../components/FontawsomeIcons/PasswordField";
 
 const Login: NextPage = () => {
-  const [PasswordInputType, ToggleIcon] = usePasswordToggle();
-  const [username, setUsername] = useState<string>();
-  const [password, setPassword] = useState<string>();
+  // const [PasswordInputType, ToggleIcon] = usePasswordToggle();
+  const [visible, setVisible] = useState<boolean>(false);
+  const [username, setUsername] = useState<string>("");
+  const [password, setPassword] = useState<string>("");
 
   const onHandleSubmit = (e: { preventDefault: () => void }) => {
     e.preventDefault();
@@ -53,21 +55,32 @@ const Login: NextPage = () => {
                     <a className={styles.link}>Forgot Password?</a>
                   </Link>
                 </label>
-                <input
+                {/* <input
                   value={password}
-                  type={`${PasswordInputType}`}
+                  // type={`${PasswordInputType}`}
+                  type={visible ? "text" : "password"}
                   className={styles.input_area}
                   onChange={(e) => setPassword(e.target.value)}
                 />
-                <span className={styles.eye_icon}>{ToggleIcon}</span>
+
+                <span className={styles.eye_icon}>
+                  {
+                    <FontAwesomeIcon
+                      icon={visible ? "eye-slash" : "eye"}
+                      onClick={() => setVisible(!visible)}
+                    />
+                  }
+                </span> */}
+                <PasswordField password={password} setPassword={setPassword}/>
+
               </fieldset>
             </div>
             <input className={styles.input_btn} type="submit" value="Login" />
             <div className={styles.asker}>
               <span className={styles.span_member}>
                 Not a member?
-                <Link href="/signup">
-                  <a className={styles.link_primary} href="/signup">
+                <Link href="/signup" >
+                  <a className={styles.link_primary}>
                     Join now
                   </a>
                 </Link>

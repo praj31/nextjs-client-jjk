@@ -4,17 +4,18 @@ import Image from "next/image";
 import Link from "next/link";
 import styles from "../styles/login-signup.module.css";
 import usePasswordToggle from "../hooks/usePasswordToggle";
+import { Navbar } from "../components/Navbar"
 
 const Signup: NextPage = () => {
   const [PasswordInputType, ToggleIcon] = usePasswordToggle();
-  const [firstname, setFirstname] = useState<string>();
-  const [lastname, setLastname] = useState<string>();
-  const [username, setUsername] = useState<string>();
-  const [email, setEmail] = useState<string>();
-  const [password, setPassword] = useState<string>();
-  const [confirmpassword, setConformpassword] = useState<string>();
+  const [firstname, setFirstname] = useState<string>("");
+  const [lastname, setLastname] = useState<string>("");
+  const [username, setUsername] = useState<string>("");
+  const [email, setEmail] = useState<string>("");
+  const [password, setPassword] = useState<string>("");
+  const [confirmpassword, setConformpassword] = useState<string>("");
 
-  const onHandleSubmit = (e: { preventDefault: () => void }) => {
+  const onHandleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log(JSON.stringify({ Firstname: `${firstname}` }));
     console.log(JSON.stringify({ Lastname: `${lastname}` }));
@@ -30,6 +31,8 @@ const Signup: NextPage = () => {
   };
 
   return (
+    <>
+    <Navbar />
     <div className={styles.container}>
       <section className={styles.img_wrap}>
         <Image
@@ -37,6 +40,7 @@ const Signup: NextPage = () => {
           layout="fill"
           width={750}
           height={1334}
+          alt="signin_panel img"
         />
       </section>
       <section className={styles.form_wrap}>
@@ -128,7 +132,7 @@ const Signup: NextPage = () => {
               <span className={styles.span_member}>
                 Already a member?
                 <Link href="/login">
-                  <a className={styles.link_primary} href="/login">
+                  <a className={styles.link_primary}>
                     Login
                   </a>
                 </Link>
@@ -138,6 +142,8 @@ const Signup: NextPage = () => {
         </div>
       </section>
     </div>
+
+    </>
   );
 };
 

@@ -1,11 +1,15 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useState } from "react";
+import React, { useState } from "react";
 import { NextPage } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "../styles/login-signup.module.css";
 import usePasswordToggle from "../hooks/usePasswordToggle";
 import { PasswordField } from "../components/FontawsomeIcons/PasswordField";
+import Router from "next/router"
+import { authenticateUser } from "../auth"
+import { Navbar } from "../components/Navbar"
+import { setUsernameCookie } from "../util";
 
 const Login: NextPage = () => {
   // const [PasswordInputType, ToggleIcon] = usePasswordToggle();
@@ -13,8 +17,12 @@ const Login: NextPage = () => {
   const [username, setUsername] = useState<string>("");
   const [password, setPassword] = useState<string>("");
 
-  const onHandleSubmit = (e: { preventDefault: () => void }) => {
+  const onHandleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    let dynamic_user: string = username;
+    setUsernameCookie(dynamic_user)
+    authenticateUser();
+    Router.push('/');
     console.log(JSON.stringify({ username: `${username}` }));
     console.log(JSON.stringify({ password: `${password}` }));
     setUsername("");
@@ -22,6 +30,8 @@ const Login: NextPage = () => {
   };
 
   return (
+    <>
+    <Navbar />
     <div className={styles.container}>
       <section className={styles.img_wrap}>
         <Image
@@ -29,6 +39,7 @@ const Login: NextPage = () => {
           width={1092}
           height={2048}
           layout="fill"
+          alt="login_panel img"
         />
       </section>
       <section className={styles.form_wrap}>
@@ -44,6 +55,7 @@ const Login: NextPage = () => {
                 <input
                   value={username}
                   type="text"
+                  minLength = {4}
                   className={styles.input_area}
                   onChange={(e) => setUsername(e.target.value)}
                 />
@@ -90,6 +102,8 @@ const Login: NextPage = () => {
         </div>
       </section>
     </div>
+
+    </>
   );
 };
 

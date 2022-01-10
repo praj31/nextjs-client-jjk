@@ -1,13 +1,17 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import type { NextPage } from "next";
+import Head from "next/head";
+import Image from "next/image";
+import styles from "../styles/Home.module.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Navbar } from "../components/Navbar";
 
 const Home: NextPage = () => {
-    return <h1>Let`s get started...shall we?
-        
-    </h1>
-}
+  return (
+    <>
+      <Navbar />
+      <p>JJK Home Page.</p>
+    </>
+  );
+};
 
-export default Home
+export default Home;

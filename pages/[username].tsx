@@ -15,10 +15,17 @@ const ProtectedRoute: NextPage = () => {
     if (!authenticated) {
       Router.push("/login");
     }
+
     const usernameFromCookie = getUsernameFromCookie();
     setUsername(usernameFromCookie);
+    
+    if(Router.query.username !== usernameFromCookie){
+      Router.push('/');
+    }
+
     setLoading(false);
   }, [authenticated]);
+
 
   if (loading) return <p>Loading...</p>;
 

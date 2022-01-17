@@ -32,6 +32,8 @@ export const Navbar: FC = (): JSX.Element => {
         )}
         {!authenticated && <Link href={"/login"}>Login</Link>}
         {!authenticated && <Link href={"/signup"}>Signup</Link>}
+        {authenticated && <Link href={"/createpost"}>Create Post</Link>}
+        {authenticated && <Link href={"/explore"}>Explore</Link>}
         {authenticated && <Link href={"/logout"}>Logout</Link>}
       </div>
     </nav>

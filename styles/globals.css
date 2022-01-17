@@ -29,3 +29,9 @@ input {
   border-top-width: 0px;
   border-top-style: solid;
 }
+
+textarea::placeholder {
+  font-size: 1rem;
+  color: #9c9c9c;
+  font-family: 'Roboto', sans-serif;
+}

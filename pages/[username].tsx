@@ -38,3 +38,8 @@ const ProtectedRoute: NextPage = () => {
 };
 
 export default ProtectedRoute;
+// if user is logged in then -> Create Post, Explore, Profile and Logout
+// if user is !logged in then -> Login and Signup
+// Create Post -> CHAR(255) text post
+// Explore -> explore accounts or posts (tabs) each with a searchbar. 
+// can search accounts using username, can search post using just text in it

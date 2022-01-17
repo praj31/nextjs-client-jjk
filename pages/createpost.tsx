@@ -12,6 +12,9 @@ const CreatePost: NextPage = () => {
     const [username, setUsername] = useState<string>("");
   
     useEffect(() => {  
+      if (!authenticated) {
+        Router.push("/login");
+      }
       const usernameFromCookie = getUsernameFromCookie();
       setUsername(usernameFromCookie);
       
@@ -27,15 +30,15 @@ const CreatePost: NextPage = () => {
         <div className={styles.post_container}>
           <div className={styles.post_wrapper}>
             <div className={styles.post_heading}>
-              <div>PFP</div>
+              <div className={styles.post_profile}></div>
               <h4>{username}</h4>
             </div>
             <textarea
               className={styles.post_content}
               placeholder="What's cooking in Shibuya?"
-              max-length="50"
+              maxLength={50}
               rows={5}
-              cols={10}
+              cols={5}
             ></textarea>
               <button className={styles.post_button}>Post</button>
           </div>

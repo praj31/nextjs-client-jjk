@@ -1,8 +1,8 @@
 .navbar {
+    width: 100%;
 	display: flex;
     flex-direction: row;
     justify-content: space-between;
-	padding-bottom: 1rem;
 	border-bottom: 1px solid #dddddd;
     padding: 1em;
 }
@@ -10,4 +10,10 @@
 .navlinks {
     display: flex;
     gap: 1em;
+}
+
+@media (max-width: 600px) {
+    .navlinks{
+        display: none;
+    }
 }

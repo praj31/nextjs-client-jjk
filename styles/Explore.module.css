@@ -1,0 +1,32 @@
+.explore_wrapper{
+    width: 100%;
+    padding: 1rem;
+}
+
+.explore_tabs {
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    border-bottom: 1px solid black;
+}
+.explore_tabs_a{
+    text-decoration: none;
+    color: black;
+    border-radius: 5px;
+    background-color: rgba(255, 99, 71, 0.096);
+    padding: 1rem;
+}
+
+.explore_content{
+    padding: 1rem;
+    width: 100%;
+    /* border: 1px solid black; */
+    margin-top: -2px;
+}
+
+.explore_tabs_active{
+    text-decoration: none;
+    color: black;
+    border-radius: 5px;
+    padding: 1rem;
+}

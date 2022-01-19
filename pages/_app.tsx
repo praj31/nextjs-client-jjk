@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { authenticateUser } from "../auth";
 import { getUsernameFromCookie } from "../util";
 import { library } from "@fortawesome/fontawesome-svg-core";
-import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
+import { faEye, faEyeSlash, faSearch } from "@fortawesome/free-solid-svg-icons";
 library.add(faEye, faEyeSlash);
 function MyApp({ Component, pageProps }: AppProps) {
   const [loading, setLoading] = useState<boolean>(true);

@@ -7,7 +7,7 @@
     display: flex;
     justify-content: space-between;
     /* outline: 1px solid red; */
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #dddddd;
     align-items: center;
 }
 .explore_search{

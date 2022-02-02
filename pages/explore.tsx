@@ -70,11 +70,7 @@ const Explore: NextPage = () => {
                 />
               </fieldset>
             </form>
-            <FontAwesomeIcon
-              style={{ cursor: "pointer" }}
-              icon={faSearch}
-              // onClick={() => setVisible(!visible)}
-            />
+            
           </div>
         </div>
 

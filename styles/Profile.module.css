@@ -1,0 +1,93 @@
+.post_container{
+    width: 100%;
+    height: 100vh;
+}
+
+.post_wrapper{
+    max-width: 32rem;
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: block;
+    /* background-color: rgba(0, 0, 0, 0.021); */
+    border: 1px solid #00000010;
+    border-radius: 5px;
+    margin: auto;
+    margin-top: 1rem;
+}
+
+.post_heading{
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    border-bottom: 1px solid #00000010;
+    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+}
+
+.post_profile{
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    background-color: #00000010;
+}
+
+
+.post_profile_info{
+    padding-left: 2rem;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 0.5rem;
+    /* width: auto; */
+}
+
+.post_profile_username{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.post_profile_username button{
+    border: 1px solid #00000010;
+    background: transparent;
+    padding: 0.45rem;
+    cursor: pointer;
+}
+
+.post_profile_post{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+}
+
+.post_content{
+    width: 100%;
+    outline: none;
+    border: none;
+    resize: none;
+    padding: 1rem 1rem 0 1rem;
+    /* border-bottom: 1px solid #00000007; */
+    padding-bottom: 1rem;
+
+}
+
+@media (max-width: 25rem){
+    .post_heading{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .post_profile_info{
+        width: 100%;
+        padding: 0;
+    }
+    .post_profile_username{
+        justify-content: space-between;
+    }
+    
+}

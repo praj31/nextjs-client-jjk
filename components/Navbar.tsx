@@ -16,24 +16,16 @@ export const Navbar: FC = (): JSX.Element => {
   return (
     <nav className={styles.navbar}>
       <div className={styles.logo}>
-        <h3>JJK HIGH</h3>
+        <h3>
+          <Link href={"/"}>JJK HIGH</Link>
+        </h3>
       </div>
       <div className={styles.navlinks}>
-        <Link href={"/"}>Home</Link>
-        {authenticated && (
-          <Link
-            href={{
-              pathname: "/[username]",
-              query: { username: username },
-            }}
-          >
-            Protected
-          </Link>
-        )}
         {!authenticated && <Link href={"/login"}>Login</Link>}
         {!authenticated && <Link href={"/signup"}>Signup</Link>}
         {authenticated && <Link href={"/createpost"}>Create Post</Link>}
         {authenticated && <Link href={"/explore"}>Explore</Link>}
+        {authenticated && <Link href={"/profile"}>Profile</Link>}
         {authenticated && <Link href={"/logout"}>Logout</Link>}
       </div>
     </nav>
